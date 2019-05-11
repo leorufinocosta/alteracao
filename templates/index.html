@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de contatos</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Nome</td>
+            <td>E-mail</td>
+            <td>deletar</td>
+            <td>Alterar</td>
+        </tr>
+        {% for contato in contatos %}
+            <tr>
+                <td>{{contato[1]}}</td>
+                <td>{{contato[2]}}</td>
+                <td><a href="/deletar/{{contato[0]}}">Deletar</a></td>
+                <td><a href="/alterar/{{contato[0]}}">Alterar</a></td>
+            </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
